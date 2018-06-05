@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Armen Mouradyan">
+        <meta name="description" content="Webapp interface for Smarticus smart lamp">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title><%= title %></title>
+        <!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Import materialize.css-->
+        <link type="text/css" rel="stylesheet" href="stylesheets/materialize.min.css"  media="screen,projection"/>
+        <link type="text/css" rel="stylesheet" href="stylesheets/style.css" media="screen,projection">
+    </head>
+
+    <body>
+        <nav class="nav-extended">
+            <div class="nav-wrapper">
+              <a href="#" class="brand-logo">Smarticus</a>
+              </ul>
+            </div>
+            <div class="nav-content">
+              <ul id="tabs-swipe-demo" class="tabs tabs-transparent">
+                <li class="tab col s3"><a class="active" href="#maintab-swipe-1">1</a></li>
+                <li class="tab col s3"><a href="#configtab1-swipe-2">2</a></li>
+                <li class="tab col s3"><a href="#configtab2-swipe-3">3</a></li>
+              </ul>
+            </div>
+        </nav>
+    
+        <div id="maintab-swipe-1" class="col s12">
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s3">
+                    <p>Active Time (minutes)</p> 
+                    </div>
+                    <div class="input-field col s6">
+                        <input type="number" name="activetime" min="1" id="activetime">
+                    </div>
+                </div>
+            </form>
+
+
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s3">
+                        <p>Toggle Lamp</p> 
+                    </div>
+                    <div class="input-field col s6">
+                        <div class="switch">
+                            <label>
+                                Off
+                                <input type="checkbox" id="togglelamp" class="toggleoptions">
+                                <span class="lever"></span>
+                                On
+                            </label>
+                        </div> 
+                    </div>
+                </div>
+            </form>
+
+            <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s3">
+                            <p>Debug Mode</p> 
+                        </div>
+                        <div class="input-field col s6">
+                            <div class="switch">
+                                <label>
+                                    Off
+                                    <input type="checkbox" id="toggledebug" class="toggleoptions">
+                                    <span class="lever"></span>
+                                    On
+                                </label>
+                            </div> 
+                        </div>
+                    </div>
+                </form>
+    
+        </div>
+
+        <div id="configtab1-swipe-2" class="col s12">
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s3">
+                        <p>Motion Detection</p> 
+                    </div>
+                    <div class="input-field col s6">
+                        <div class="switch">
+                            <label>
+                                Off
+                                <input type="checkbox" id="togglemotion" class="toggleoptions">
+                                <span class="lever"></span>
+                                On
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s3">
+                            <p>Frequency Detection</p> 
+                        </div>
+                        <div class="input-field col s6 disable">
+                            <div class="switch">
+                                <label>
+                                    Off
+                                    <input disabled type="checkbox" id="togglefreq" class="toggleoptions">
+                                    <span class="lever"></span>
+                                    On
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s3">
+                            <p>Volume Detection</p> 
+                        </div>
+                        <div class="input-field col s3">
+                            <div class="switch">
+                                <label>
+                                    Off
+                                    <input type="checkbox" id="togglevol" class="toggleoptions">
+                                    <span class="lever"></span>
+                                    On
+                                    
+                            <input type="number" name="volumethreshold" min="0" id="volthresh" class="thresh">
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div id="configtab2-swipe-3" class="col s12">
+            <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s3">
+                            <p>Gesture Detection</p> 
+                        </div>
+                        <div class="input-field col s6">
+                            <div class="switch">
+                                <label>
+                                    Off
+                                    <input disabled type="checkbox" id="togglegesture" class="toggleoptions">
+                                    <span class="lever"></span>
+                                    On
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s3">
+                            <p>Light Detection</p> 
+                        </div>
+                        <div class="input-field col s6">
+                            <div class="switch">
+                                <label>
+                                    Off
+                                    <input type="checkbox" id="togglelight" class="toggleoptions">
+                                    <span class="lever"></span>
+                                    On
+                                    <input type="number" name="lightthreshold" min="0" max="99" id="lightthresh" class="thresh">
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s3">
+                            <p>Toggle Dimming</p> 
+                        </div>
+                        <div class="input-field col s6">
+                            <div class="switch">
+                            <label>
+                                Off
+                                <input type="checkbox" id="toggledim" class="toggleoptions">
+                                <span class="lever"></span>
+                                On
+                                <p>Percentage: <output id="percent"></output></p>
+                            </label>
+                        </div> 
+                    </div>
+                </div>
+            </form>
+
+        </div>
+
+        <hr>
+
+        <a class="waves-effect waves-light btn" id="refresh">Refresh Graph</a>
+
+        <div class="input-field col s12">
+                    <select class="browser-default" id="graphselect">
+                        <option value="" disabled selected>Choose Data Graph</option>
+                        <option value="1">Detections by Sensor Type (Off/On to Off/On)</option>
+                        <option value="2">Detections by Sensor Type (Off/On to On)</option>
+                        <option value="3">Detections by Sensor Type (Off/On to Off)</option>
+                        <option value="4">Detections by Sensor Type (Off to Off/On)</option>
+                        <option value="5">Detections by Sensor Type (On to Off/On)</option>
+                        <option value="6">Detections by Sensor Type (Off to On)</option>
+                        <option value="7">Detections by Sensor Type (Off to Off)</option>
+                        <option value="8">Detections by Sensor Type (On to Off)</option>
+                        <option value="9">Detections by Sensor Type (On to On)</option>
+                        <option value="10">Time On</option>
+                        <option value="11">Time On Across Days of Week (Minutes)</option>
+                        <option value="12">Total Joules Per Minute</option>
+                        <option value="13">Joules Across Days of Week (J/Min)</option>
+                        <option value="14">Time On by Given Day</option>
+                        <option value="15">Joules by Given Day (J/Min)</option>
+                    </select>
+        </div>
+        <div class="input-field col s12">
+                <select class="browser-default" id="givenday">
+                        <option value="" disabled selected>Choose Given Day</option>
+                </select>
+        </div>
+
+        <div id="chartContainer"></div>
+
+        <script src="javascripts/jquery.min.js"></script>
+        <script src="javascripts/materialize.min.js"></script>
+        <script src="javascripts/jquery.canvasjs.min.js"></script>
+        <script src="javascripts/index.js"></script>
+    </body>
+</html>
