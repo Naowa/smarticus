@@ -68,3 +68,6 @@ User can turn light on and off from the web application.
 
 ### Data Analytics
 The web application shows usage statistics as various graphs. 
+
+## System Demo
+See Smarticus System Demo PDF.
