@@ -1,4 +1,4 @@
-# smarticus
+# Smarticus
 
 ## Overiew
 Smarticus is a smart lamp that knows when to turn on and off. Smarticus gathers information on ambient light, volume, and motion, using this information along with user settings to determine its state. A web application is used to change settings and view usage statistics.
